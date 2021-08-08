@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>BD GDP Indicator</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container">
+      <div class="header-container d-flex align-items-center justify-content-between">
+        <div class="logo">
+          <h1 class="text-light"><a href="index.html"><span>BD GDP Indicator</span></a></h1>
+        </div>
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+            <li><a class="nav-link scrollto active" href="technology.html">Technology</a></li>
+            <li><nav class="navbar navbar-light bg-light">
+              <div class="container-fluid">
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search By Year" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </nav></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+
+      </div>
+    </div>
+  </header>
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/img/ml1.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>New Machine Learn Technology</h5>
+          <p>Using ML Technology buliding model with different algorithm</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/ml2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Forecasting the future</h5>
+          <p>Machine can predict future with some percentage accracy</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/ml3.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>ARIMA time series model</h5>
+          <p>Using ARIMA time series model for perfectly prediction this data.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <section id="details">
+      <h1><center><b>Time Series Models</b> </center></h1>
+      <h3><center><b>AR, MA, ARIMA</b></center></h3>
+      <div style="margin: 25px 50px 75px 100px">
+        <h2>AR (Auto-Regressive) Model</h2>
+      <p>The time period at t is impacted by the observation at various slots t-1, t-2, t-3, ….., t-k. The impact of previous time spots is decided by the coefficient factor at that particular period of time. The price of a share of any particular company X may depend on all the previous share prices in the time series. This kind of model calculates the regression of past time series and calculates the present or future values in the series in know as Auto Regression (AR) model. <br>
+       <b> Yt = β₁* y-₁ + β₂* yₜ-₂ + β₃ * yₜ-₃ + ………… + βₖ * yₜ-ₖ </b><br>
+        Consider an example of a milk distribution company that produces milk every month in the country. We want to calculate the amount of milk to be produced current month considering the milk generated in the last year. We begin by calculating the PACF values of all the 12 lags with respect to the current month. If the value of the PACF of any particular month is more than a significant value only those values will be considered for the model analysis.
+        For e.g in the above figure the values 1,2, 3 up to 12 displays the direct effect(PACF) of the milk production in the current month w.r.t the given the lag t. If we consider two significant values above the threshold then the model will be termed as AR(2).</p>
+
+        <h2>MA (Moving Average) Model</h2>
+        <p>
+        The time period at t is impacted by the unexpected external factors at various slots t-1, t-2, t-3, ….., t-k. These unexpected impacts are known as Errors or Residuals. The impact of previous time spots is decided by the coefficient factor α at that particular period of time. The price of a share of any particular company X may depend on some company merger that happened overnight or maybe the company resulted in shutdown due to bankruptcy. This kind of model calculates the residuals or errors of past time series and calculates the present or future values in the series in know as Moving Average (MA) model.
+        <br> <b>Yt = α₁* Ɛₜ-₁ + α₂ * Ɛₜ-₂ + α₃ * Ɛₜ-₃ + ………… + αₖ * Ɛₜ-ₖ </b> <br>
+        Consider an example of Cake distribution during my birthday. Let's assume that your mom asks you to bring pastries to the party. Every year you miss judging the no of invites to the party and end upbringing more or less no of cakes as per requirement. The difference in the actual and expected results in the error. So you want to avoid the error for this year hence we apply the moving average model on the time series and calculate the no of pastries needed this year based on past collective errors. Next, calculate the ACF values of all the lags in the time series. If the value of the ACF of any particular month is more than a significant value only those values will be considered for the model analysis.
+        For e.g in the above figure the values 1,2, 3 up to 12 displays the total error(ACF) of count in pastries current month w.r.t the given the lag t by considering all the in-between lags between time t and current month. If we consider two significant values above the threshold then the model will be termed as MA(2).
+        </p>
+
+        <h2>ARIMA (Auto-Regressive Integrated Moving Average) Model</h2>
+        <p>
+            We know that in order to apply the various models we must in the beginning convert the series into Stationary Time Series. In order to achieve the same, we apply the differencing or Integrated method where we subtract the t-1 value from t values of time series. After applying the first differencing if we are still unable to get the Stationary time series then we again apply the second-order differencing.
+            The ARIMA model is quite similar to the ARMA model other than the fact that it includes one more factor known as Integrated( I ) i.e. differencing which stands for I in the ARIMA model. So in short ARIMA model is a combination of a number of differences already applied on the model in order to make it stationary, the number of previous lags along with residuals errors in order to forecast future values.
+            Consider the above graphs where the MA and AR values are plotted with their respective significant values. Let's assume that we consider only 1 significant value from the AR model and likewise 1 significant value from the MA model. Also, the graph was initially non-stationary and we had to perform differencing operation once in order to convert into a stationary set. Hence the ARIMA model which will be obtained from the combined values of the other two models along with the Integral operator can be displayed as ARIMA(1,1,1).
+        </p>
+        <h2>Conclusion</h2>
+        <p>
+            All these models give us an insight or at least close enough prediction about any particular time series. Also, it depends on the users that which model perfectly suffices their needs. If the chances of error rate are less in any one model compared to other models then it's preferred that we choose the one which gives us the closest estimation.
+            Hope this article helps you to understand things better !!
+        </p>
+        <a href="https://towardsdatascience.com/time-series-models-d9266f8ac7b0">Reference and help from there</a>
+    </div>   
+  </section>
+  <section id="team" class="team">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="section-title" data-aos="fade-right">
+            <h2>Our Team</h2>
+            <p>Here, Our team work on Machine Learning Model, Front-End & Deployment. We are focus on Data Science & Machine Learning</p>
+          </div>
+        </div>
+        <div class="col-lg-9">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+                <div class="member-info">
+                  <h4>Abu Kowshir Bitto</h4>
+                  <span>Researcher and Data Scientist</span>
+                  <p>Here, Analysis & Pre-Process the Data. Also contribute in Front-End Development.</p>
+                  <div class="social">
+                    <a href="https://www.linkedin.com/in/kowshir-bitto/"> <i class="ri-linkedin-box-fill"></i> </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="member" data-aos="zoom-in" data-aos-delay="200">
+                <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
+                <div class="member-info">
+                  <h4>Mahfuj Hasan Shohug</h4>
+                  <span>Researcher and Data Scientist</span>
+                  <p>Here, Develop the ARIMA model .Also contribute in Front-End Development.</p>
+                  <div class="social">
+                    <a href="https://www.linkedin.com/in/mahfuj-hasan-62b70a1a3"> <i class="ri-linkedin-box-fill"></i> </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="member" data-aos="zoom-in" data-aos-delay="200">
+                <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+                <div class="member-info">
+                  <h4>Ashikur Rahaman</h4>
+                  <span>Machine Learning Engineer</span>
+                  <p>Here, Deploy the Model using Django Framework & fueled up web engine using static model data.</p>
+                  <div class="social">
+                    <a href="https://www.linkedin.com/in/ashikur-rahaman-7b1941b4"> <i class="ri-linkedin-box-fill"></i> </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <div class="section-title">
+              <h2>Contact</h2>
+              <p>You can contact us. If you have any query or Any suggestion</p>
+            </div>
+          </div>
+
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+            
+
+            <div class="row">
+              <div class="col-lg-6 mt-4">
+                <div class="info">
+                  <i class="bi bi-envelope"></i>
+                  <h4>Email:</h4>
+                  <p>mahfuj.shohug@gmail.com</p>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="info w-100 mt-4">
+                  <i class="bi bi-phone"></i>
+                  <h4>Call:</h4>
+                  <p>+8801786725669</p>
+                </div>
+              </div>
+            </div>
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer">
+
+
+    <div class="footer-copyright text-center py-3">
+
+      <div class="footer-copyright text-center py-3">
+        <div class="copyright"style="text-center">
+          &copy; Copyright <strong><span>Team GDP Indicator</span></strong>. All Rights Reserved
+        </div>
+    </div>
+  </footer>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
